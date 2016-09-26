@@ -1,0 +1,36 @@
+﻿<HTML>
+	<head>
+	<title>Contatti</title>
+	
+    <!-- JS PER CONTROLLI CONTATTACI-------------------------------------------------------------------------------->
+    <script type="text/javascript" src="controlli.js"></script>
+	</head>
+	<body onload="generaRisposta();">
+    	
+	<form method="POST" name="Form1" id="Form1" action="invioMail.php" target="_self">
+	<table border="0" width="100%">
+        <tr><td>I campi segnati con un (*) sono obbligatori</td></tr>
+            <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr><td >Il tuo nome (*)</td></tr>
+        <tr><td><input id="txtNome"  name="txtNome"  type="text" style="width: 100%; " /></td></tr>
+        <tr><td >Il tuo cognome (*)</td></tr>
+        <tr><td><input id="txtCognome"  name="txtCognome"  type="text" style="width: 100%; " /></td></tr>
+        <tr><td >La tua società (*)</td></tr>
+        <tr><td><input id="txtSocieta"  name="txtSocieta"  type="text" style="width: 100%;   " /></td></tr>
+        <tr><td >La tua email (*)</td></tr>
+        <tr><td><input id="txtMail"  name="txtMail"  type="text" style="width: 100%;  " /></td></tr>
+        <tr><td >La tua richiesta (*)</td></tr>
+        <tr><td><textarea id="txtMessaggio" name="txtMessaggio"  rows="10" style="width: 100%; "></textarea></td></tr>
+      
+    </table>
+    <p id="lblDomanda">Inserisci la risposta corretta </p>
+    <p><input id="txtRisposta" type="text" style="width: 100%; " /></p>
+    <p>&nbsp;</p>
+    <p><input id="btnInvia" onclick="verifica();" style="cursor:  pointer;  " type="button" value="Invia"  /></p>
+    <input id="hidRisposta" type="hidden" value="-"/>   
+ </form> 
+
+</body>
+</html>

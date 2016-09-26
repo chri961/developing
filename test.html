@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il mio primo layout in bootstrap</title>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<!--[if lt IE 9]>       
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.js"></script>
+<![endif]-->
+ <nav id="mainNav" class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" s> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a href="#" class="navbar-brand">WOW</a> </div>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Chi siamo</a></li>
+          <li class="dropdown"> 
+          	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Servizi <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Ideazione loghi</a></li>
+              <li><a href="#">Immagine coordinata</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sviluppo siti web</a></li>
+              <li><a href="#">Creazione app.</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Cerca nel sito...">
+          </div>
+        </form>
+      </div>
+ </nav>
+ <!-- JS PER CONTROLLI CONTATTACI-------------------------------------------------------------------------------->
+    <script type="text/javascript" src="controlli.js"></script>
+	</head>
+</head>
+<body>
+ 
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<body onload="generaRisposta();">
+   <div id="content"> 	
+	<form method="POST" name="Form1" id="Form1" action="script/invioMail.php" target="_self">
+	<table border="0" width="100%">
+        <tr><td>I campi segnati con un (*) sono obbligatori</td></tr>
+            <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr><td >Il tuo nome (*)</td></tr>
+        <tr><td><input id="txtNome"  name="txtNome"  type="text" style="width: 100%; " /></td></tr>
+        <tr><td >Il tuo cognome (*)</td></tr>
+        <tr><td><input id="txtCognome"  name="txtCognome"  type="text" style="width: 100%; " /></td></tr>
+        <tr><td >La tua società (*)</td></tr>
+        <tr><td><input id="txtSocieta"  name="txtSocieta"  type="text" style="width: 100%;   " /></td></tr>
+        <tr><td >La tua email (*)</td></tr>
+        <tr><td><input id="txtMail"  name="txtMail"  type="text" style="width: 100%;  " /></td></tr>
+        <tr><td >La tua richiesta (*)</td></tr>
+        <tr><td><textarea id="txtMessaggio" name="txtMessaggio"  rows="10" style="width: 100%; "></textarea></td></tr>
+      
+    </table>
+    <p id="lblDomanda">Inserisci la risposta corretta </p>
+    <p><input id="txtRisposta" type="text" style="width: 100%; " /></p>
+    <p>&nbsp;</p>
+    <p><input id="btnInvia" onclick="verifica();" style="cursor:  pointer;  " type="button" value="Invia"  /></p>
+    <input id="hidRisposta" type="hidden" value="-"/>   
+ </form> 
+</div>
+<div id="footerWrap" class="voffset5">
+  <footer class="container">
+    <p class="text-center">© Copyright All rights reserved.</p>
+  </footer>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
